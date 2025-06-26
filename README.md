@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Sistema de Cadastro de Alunos e Estatísticas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto consiste em uma aplicação web simples feita com **React** e estilizada com **TailwindCSS**, onde é possível:
 
-## Available Scripts
+* Cadastrar alunos com nome, sobrenome, e-mail, senha e cursos;
+* Selecionar múltiplos cursos para cada aluno;
+* Editar e excluir alunos cadastrados;
+* Visualizar estatísticas de alunos por curso;
+* Trocar entre abas de cadastro e estatísticas.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
 
-### `npm start`
+* React (Vite ou Create React App)
+* TailwindCSS
+* JavaScript (ES6+)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+📁 alunos-app/
+├── 📁 src/
+│   ├── 📁 components/
+│   │   ├── CadastroAluno.jsx
+│   │   ├── ListaAlunos.jsx
+│   │   └── Estatisticas.jsx
+│   ├── App.js
+│   ├── index.css
+│   └── main.jsx
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
+```
 
-### `npm test`
+## Como Executar o Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório
 
-### `npm run build`
+```bash
+git clone https://github.com/seuusuario/alunos-app.git
+cd alunos-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Instale as dependências:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Inicie o servidor de desenvolvimento:
 
-### `npm run eject`
+```bash
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Acesse o projeto em `http://localhost:5173` (ou porta definida pelo Vite).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Comentários nos Códigos (em Português)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Os arquivos dos componentes contêm comentários explicativos em **português** para facilitar o entendimento e aprendizado. Cada função importante foi documentada com:
 
-## Learn More
+* Descrição clara da sua função;
+* Explicação de parâmetros e retornos (quando aplicável);
+* Orientações para manutenção ou melhoria futura.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcionalidades
 
-### Code Splitting
+### Aba de Cadastro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Formulário para entrada de nome, sobrenome, e-mail e senha;
+* Lista de checkboxes para selecionar os cursos disponíveis;
+* Botão de cadastro adiciona o aluno à lista de maneira temporária (em memória);
+* Após cadastro, o aluno aparece na lista logo abaixo do formulário;
+* Possui botões para editar ou excluir o aluno.
 
-### Analyzing the Bundle Size
+### Aba de Estatísticas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Exibe a lista de cursos com quantidade de alunos matriculados em cada um;
+* Só são mostrados cursos com ao menos um aluno.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Observações
 
-### Advanced Configuration
+* Os dados não são persistidos em banco de dados, sendo armazenados somente na memória enquanto a aplicação estiver rodando.
+* O projeto é ideal para fins educativos e testes com formulários e manipulação de estado no React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Melhorias Futuras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Persistência de dados com banco de dados (ex: Firebase, PostgreSQL);
+* Integração com backend (Node.js/Express);
+* Validações de formulário mais completas;
+* Paginação da lista de alunos e filtros.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido por Daniel 🚀
